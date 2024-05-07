@@ -2,12 +2,12 @@
 This project is a Flask application that allows users to browse and adopt different types of pets such as dogs, cats, and rabbits. The application provides a simple and intuitive interface for users to find their new furry friend. It is designed for pet lovers and animal shelters looking for an efficient way to connect pets with potential owners.
 
 ## Table of Contents
-Installation
-Usage
-Features
-License
-Contact
-Acknowledgments
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 ## Installation
 Follow these steps to install the project locally:
 
