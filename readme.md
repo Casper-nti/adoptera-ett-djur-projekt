@@ -29,7 +29,7 @@ Pet Details: Users can view detailed information about a specific pet.
 This project is licensed under MIT license. For more details, see the LICENSE file.
 
 ## Contact
-Casper - [Email](casper.ljungberg@elev.ga.ntig.se)
+Casper - casper.ljungberg@elev.ga.ntig.se
 
 ## Project Link
 https://github.com/yourusername/pet-adoption-flask-app
