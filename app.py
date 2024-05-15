@@ -39,6 +39,14 @@ def index():
 
 @app.route('/animals/<string:pet_type>')
 def animals(pet_type):
+  """Generate HTML list of animals of a specific pet type.
+
+  Args:
+      pet_type (str): The type of pet (e.g., 'dog', 'cat', 'bird').
+
+  Returns:
+      str: The generated HTML code containing a list of animals of the specified pet type.
+  """  
   html = f'''<h1>List of {pet_type}</h1>
   <ul>'''
   for id, pet in enumerate(pets[pet_type]):
@@ -49,6 +57,16 @@ def animals(pet_type):
 
 @app.route('/animals/<string:pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
+  """
+  Display information about a pet.
+
+  Args:
+    pet_type (str): The type of pet.
+    pet_id (int): The ID of the pet.
+
+  Returns:
+    str: HTML content representing the pet information.
+  """  
   pet = pets[pet_type][pet_id]=pets[pet_type][pet_id]
   html = f'''<h1>{pet["name"]}</h1>
   <img src="{pet["url"]}">
@@ -60,6 +78,4 @@ def pet(pet_type, pet_id):
   
   return html
 
-  # Viktigt: Denna kodrad ska alltid placeras längst ner i filen.
-  # Detta för att säkerställa en korrekt uppstart av servern.
 app.run(debug=True, host="0.0.0.0")
