@@ -36,32 +36,29 @@ def index():
   </ul>
   '''
 
-@app.route('/animals/<str:pet_type>')
+
+@app.route('/animals/<string:pet_type>')
 def animals(pet_type):
-    """
-    Renders a list of pets based on the specified pet type.
+  html = f'''<h1>List of {pet_type}</h1>
+  <ul>'''
+  for id, pet in enumerate(pets[pet_type]):
+    html += f'''<li><a href="/animals/{pet_type}/{id}">{pet["name"]}</a></li>'''
 
-    Args:
-      pet_type (str): The type of pet to display.
+  html += '</ul>'
+  return html
 
-    Returns:
-      str: The HTML content of the list of pets.
-    """
-    return f'''<h1>List of {pet_type}</h1>'''
-
-@app.route('/animals/<str:pet_type>/<int:pet_id>')
+@app.route('/animals/<string:pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
-    """
-    Renders information about a specific pet.
-
-    Args:
-      pet_type (str): The type of pet.
-      pet_id (int): The ID of the pet.
-
-    Returns:
-      str: The HTML content of the pet information.
-    """
-    return f'''<h1>{pet_id} {pet_type}</h1>'''
+  pet = pets[pet_type][pet_id]=pets[pet_type][pet_id]
+  html = f'''<h1>{pet["name"]}</h1>
+  <img src="{pet["url"]}">
+  <p>{pet["description"]}</p>
+  <ul>
+    <li>age: {pet["age"]}</li>
+    <li>breed: {pet["breed"]}</li>
+  </ul>'''
+  
+  return html
 
   # Viktigt: Denna kodrad ska alltid placeras längst ner i filen.
   # Detta för att säkerställa en korrekt uppstart av servern.
