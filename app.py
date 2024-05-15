@@ -36,7 +36,7 @@ def index():
   </ul>
   '''
 
-@app.route('/animals/<int:pet_type>')
+@app.route('/animals/<str:pet_type>')
 def animals(pet_type):
     """
     Renders a list of pets based on the specified pet type.
