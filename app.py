@@ -42,7 +42,7 @@ def animals(pet_type):
     Renders a list of pets based on the specified pet type.
 
     Args:
-      pet_type (int): The type of pet to display.
+      pet_type (str): The type of pet to display.
 
     Returns:
       str: The HTML content of the list of pets.
