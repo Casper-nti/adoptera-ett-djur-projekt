@@ -11,20 +11,29 @@ This project is a Flask application that allows users to browse and adopt differ
 ## Installation
 Follow these steps to install the project locally:
 
+```bash
 git clone https://github.com/yourusername/pet-adoption-flask-app.git
 cd pet-adoption-flask-app
+```
 ## Install necessary dependencies
+
+```bash
 pip install -r requirements.txt
+```
 ## Usage
 To start the application, navigate to the project directory and run the following command:
 
+```bash
 python app.py
+```
+
 The application will start a local server. Open your web browser and visit http://0.0.0.0:5000 to start browsing pets.
 
 ## Features
 Browse Pets: Users can browse through a list of available pets.
 Pet Categories: Pets are categorized into dogs, cats, and rabbits for easy browsing.
 Pet Details: Users can view detailed information about a specific pet.
+
 ## License
 This project is licensed under MIT license. For more details, see the LICENSE file.
 
