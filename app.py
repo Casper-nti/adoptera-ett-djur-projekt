@@ -49,13 +49,13 @@ def animals(pet_type):
     """
     return f'''<h1>List of {pet_type}</h1>'''
 
-@app.route('/animals/<int:pet_type>/<int:pet_id>')
+@app.route('/animals/<str:pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
     """
     Renders information about a specific pet.
 
     Args:
-      pet_type (int): The type of pet.
+      pet_type (str): The type of pet.
       pet_id (int): The ID of the pet.
 
     Returns:
